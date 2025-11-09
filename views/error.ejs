@@ -1,0 +1,12 @@
+<!-- using this layout tag, you avoid copying and pasting the header, footer, and basic HTML 
+structure into every single view file (index.ejs, show.ejs, error.ejs, etc.). 
+The content of error.ejs will be inserted automatically into a specific placeholder (usually 
+) inside the boilerplate.ejs layout. -->
+<% layout("/layouts/boilerplate") %>
+
+<div class="row mt-5">
+<div class="alert alert-secondary col-4 offset-3" role="alert">
+  <h4 class="alert-heading"><%= message %></h4>
+</div>
+</div>
+ <!-- it is for showing errors in alert way -->

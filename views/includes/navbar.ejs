@@ -1,0 +1,58 @@
+<style>
+.btn-search{
+  background-color: #fe424d;
+  color: azure;
+  padding: 0 1rem 0 1rem;
+  font-size: x-small;
+}
+.btn-search:hover{
+  background-color: #fe424d;
+  color: azure;
+}
+.search-inp{
+  border-radius: 25px;
+  padding: 0.5rem 3rem 0.5rem 3 rem;
+  font-size: 1.2rem;
+}
+</style>
+
+
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+    <!-- sticky-top is used for stick the navbar 
+    border-bottom is used for line at bottom navbar
+    bg-body-light means background body light -->
+
+  <div class="container-fluid">
+    <a class="navbar-brand" ><i class="fa-solid fa-compass"></i></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active"  href="/listings">Home</a>
+        <a class="nav-link" href="/listings">Explore</a>
+       
+       
+      </div>
+        <div class="navbar-nav ms-auto ">
+            <form class="d-flex" role="search">
+        <input class="search-inp form-control me-2" type="search" placeholder="Search destinstion" aria-label="Search"/>
+        <button class="btn btn-search" type="submit">Search</button>
+      </form>
+        </div>
+       <div class="navbar-nav ms-auto">
+         <a class="nav-link" href="/listings/new">Airbnb Your hometown</a>
+        <%if(!currUser){%>
+        <a class="nav-link active"  href="/signUp"><b>SignUp</b></a>
+        <a class="nav-link" href="/login"><b>Login</b></a>
+       <% } %> 
+        <%if(currUser){%>
+        <a class="nav-link" href="/my-bookings"><b>My Bookings</b></a>
+        <a class="nav-link" href="/logout"><b>Logout</b></a>
+        <% } %>
+
+
+    </div>
+  </div>
+</nav>
+

@@ -1,0 +1,22 @@
+<% layout("/layouts/boilerplate") %>
+<div class="container mt-5">
+  <h3 class="mb-4">My Bookings</h3>
+  <ul class="list-group">
+    <% bookings.forEach(function(booking) { %>
+      <li class="list-group-item d-flex align-items-center">
+        <% if (booking.hotel && booking.hotel.image && booking.hotel.image.url) { %>
+          <img src="<%= booking.hotel.image.url %>" alt="listing image" class="booking">
+        <% } %>
+        <div class="flex-grow-1">
+          <strong><%= booking.hotel ? booking.hotel.title : "Listing Deleted" %></strong>
+          <div class="text-muted" style="font-size: 0.95em;">
+            on <%= booking.date ? booking.date.toLocaleDateString() : '' %>
+          </div>
+        </div>
+      </li>
+    <% }); %>
+    <% if (bookings.length === 0) { %>
+      <li class="list-group-item text-muted">You have no bookings yet.</li>
+    <% } %>
+  </ul>
+</div>

@@ -1,0 +1,141 @@
+body{
+    background-color: azure;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container{
+    flex:1
+}
+.fa-compass{
+    color: #fe424d;
+    font-size: 2rem;
+}
+/* navbar styling */
+
+.navbar{
+    height: 5rem;
+    background-color: white;
+}
+/* navbar elements styling */
+.nav-link{
+ 
+    color: #222222 !important;
+
+    /* custom styling override bootstrap styling that's why important is used */
+}
+
+.f-info-links a{
+
+    text-decoration: none;
+    color: black;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+    color: #222222;
+}
+.f-info-links,.f-info-socials,.f-company-info{
+    width: 100%;
+    display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+
+.f-info-socials i{
+    font-size: 1.2rem;
+    margin-right: 1.7rem;
+}
+.f-info{
+text-align: center;
+background-color: bisque;
+height: 8rem;
+ display: flex;
+flex-wrap: wrap;
+   
+justify-content: center;
+   align-items: space evenly;
+    
+    
+
+}
+/* cards styling */
+
+
+
+.card{
+    border: none !important;
+    margin-bottom: 5rem;
+}
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100%;
+    object-fit: cover;
+}
+.card-body{
+    padding: 0 !important; 
+    /* price and title align with image */
+}
+.listing-link{
+    text-decoration: none;
+}
+/* it is for hover select effect */
+.card-img-overlay{
+    opacity: 1;
+}
+.card-img-overlay:hover{
+
+    opacity: 0.2;
+    background-color: white;
+}
+.form-control{
+    padding: 0;
+}
+/* .add-btn,.edit-btn{
+    background-color: #fe424d !important;
+    border : none !important;
+} */
+.show-img{
+    height: 30vh;
+}
+/* .edit-dlt-btn{
+    display: flex;
+    
+    border: none !important;
+} */
+
+/* .edit-btn, .btn-danger, .btn-success {
+    min-width: 100px;
+    max-width: 130px;
+    font-size: 0.93rem;
+    padding: 6px 12px;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 6px;
+}
+.d-flex.justify-content-center.align-items-center.gap-2.mb-4 {
+    gap: 12px;
+} */
+ .show-img{
+    height: 30vh;
+ }
+ .btns{
+    display: flex;
+ }
+ .show-card{
+    padding-left: 0;
+    padding-right: 0;
+ }
+
+.booking{
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 16px;
+}
+
+#map{
+    height: 400px;
+    width: 80vh;
+}
